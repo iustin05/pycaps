@@ -67,11 +67,13 @@ pycaps is currently in a very alpha stage and is not yet available on PyPI. You 
     pip install git+https://github.com/francozanardi/pycaps.git
     ```
 
-3.  **Install Browser Dependencies for Rendering:**
-    `pycaps` uses Playwright to render CSS styles. You need to install its browser dependency (this is a one-time setup):
-    ```bash
-    playwright install chromium
-    ```
+3.  **Install Browser Dependencies for Rendering (Optional):**
+    `pycaps` currently has two different options to render the subtitle images:
+    - `CssSubtitleRenderer`, which is the original and default one. It uses Playwright to render CSS styles. So, you need to install its browser dependency to use it:
+      ```bash
+      playwright install chromium
+      ```
+    - `PictexSubtitleRenderer`, which is a light-weight option. It doesn't use a browser, but it only support a subset of CSS, and it may present some visual differences in the result (specially in the shadows, you should modify the CSS from the templates to get the same results). To use it, you must call `with_custom_subtitle_renderer(PictexSubtitleRenderer())` when `CapsPipelineBuilder()` is created.
 
 > ⚠️ **Note**: The first time you use `pycaps`, it will also download a Whisper AI model for transcription. This may take a few minutes and only happens once.
 
