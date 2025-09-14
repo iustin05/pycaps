@@ -3,7 +3,7 @@
 [![Status](https://img.shields.io/badge/status-alpha-orange.svg)](https://github.com/francozanardi/pycaps)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/downloads/)
-[![Hugging Face Spaces](https://img.shields.io/badge/Try%20it%20online-Hugging%20Face-blue?logo=huggingface)](https://huggingface.co/spaces/francozanardi/pycaps)
+[![Hugging Face Spaces](https://img.shields.io/badge/Try%20it%20online-Hugging%20Face-blue?logo=huggingface)](https://huggingface.co/spaces/francozanardi/pycaps-new)
 
 
 **pycaps** is a Python tool for adding CSS styled subtitles to videos. It's designed as both a programmable library and a command-line interface (CLI), making it perfect for automating the creation of dynamic content for platforms like TikTok, YouTube Shorts, and Instagram Reels.
@@ -21,11 +21,11 @@ You have two options to test `pycaps` directly in your browser. Choose the one t
 
 Ideal for a **quick preview**, testing built-in templates, and **editing captions** with a user-friendly interface.
 
-[![Hugging Face Spaces](https://img.shields.io/badge/Launch%20Web%20Demo-Hugging%20Face-blue?logo=huggingface)](https://huggingface.co/spaces/francozanardi/pycaps)
+[![Hugging Face Spaces](https://img.shields.io/badge/Launch%20Web%20Demo-Hugging%20Face-blue?logo=huggingface)](https://huggingface.co/spaces/francozanardi/pycaps-new)
 
 > **Keep in mind:**
 > *   This demo runs on a shared, CPU-only environment, so it's best for **short videos (< 60 seconds)**.
-> *   For a private, faster experience, you can **[duplicate the Space](https://huggingface.co/spaces/francozanardi/pycaps?duplicate=true)** for free.
+> *   For a private, faster experience, you can **[duplicate the Space](https://huggingface.co/spaces/francozanardi/pycaps-new?duplicate=true)** for free.
 
 ### 2. Full-Power Notebook (on Google Colab)
 
