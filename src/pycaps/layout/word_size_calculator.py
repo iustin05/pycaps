@@ -1,8 +1,8 @@
 from pycaps.common import Document, ElementState
-from pycaps.renderer import CssSubtitleRenderer
+from pycaps.renderer import SubtitleRenderer
 
 class WordSizeCalculator:
-    def __init__(self, renderer: CssSubtitleRenderer):
+    def __init__(self, renderer: SubtitleRenderer):
         self._renderer = renderer
 
     def calculate(self, document: Document) -> None:

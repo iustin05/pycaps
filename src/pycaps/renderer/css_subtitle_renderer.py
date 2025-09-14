@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from playwright.sync_api import Page, Browser, Playwright
     from PIL.Image import Image
 
-class CssSubtitleRenderer:
+class CssSubtitleRenderer(SubtitleRenderer):
 
     DEFAULT_DEVICE_SCALE_FACTOR: int = 2
     DEFAULT_VIEWPORT_HEIGHT_RATIO: float = 0.25

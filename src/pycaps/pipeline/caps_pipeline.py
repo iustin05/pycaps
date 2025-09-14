@@ -1,7 +1,7 @@
 import time
 import os
 from pycaps.transcriber import AudioTranscriber, WhisperAudioTranscriber, BaseSegmentSplitter
-from pycaps.renderer import SubtitleRenderer, CssSubtitleRenderer
+from pycaps.renderer import SubtitleRenderer, CssSubtitleRenderer, PictexSubtitleRenderer
 from pycaps.video import SubtitleClipsGenerator, VideoGenerator
 from pycaps.layout import WordSizeCalculator, PositionsCalculator, LineSplitter, LayoutUpdater
 from pycaps.tag import SemanticTagger, StructureTagger
@@ -13,7 +13,7 @@ from typing import Optional, List, Tuple
 from pathlib import Path
 from .subtitle_data_service import SubtitleDataService
 from pycaps.transcriber import TranscriptionEditor
-from pycaps.logger import logger, ProcessLogger
+from pycaps.logger import logger
 from pycaps.utils import time_utils
 from pycaps.bootstrap import check_dependencies
 import pycaps.api.api_sender as ApiSender

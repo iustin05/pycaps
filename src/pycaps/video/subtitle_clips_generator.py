@@ -1,11 +1,11 @@
-from typing import Optional, List, Callable
+from typing import Optional, Callable
 from pycaps.common import Document, Word, WordClip, ElementState, Line
-from pycaps.renderer import CssSubtitleRenderer
+from pycaps.renderer import SubtitleRenderer
 from tqdm import tqdm
 
 class SubtitleClipsGenerator:
 
-    def __init__(self, renderer: CssSubtitleRenderer):
+    def __init__(self, renderer: SubtitleRenderer):
         self._renderer = renderer
 
     def generate(self, document: Document) -> None:
