@@ -29,19 +29,33 @@ classifiers = [
 ]
 
 dependencies = [
-    "openai-whisper",
-    "playwright",
     "Pillow",
     "numpy",
     "opencv-python",
     "pydantic",
     "typer",
-    "pywebview",
     "requests",
     "pydub>=0.25.1",
     'audioop-lts; python_version >= "3.13"',
     "multiprocess",
-    "tqdm",
+    "tqdm"
+]
+
+[project.optional-dependencies]
+fast = [
+    "html2pic",
+    "google-cloud-speech"
+]
+base = [
+    "openai-whisper",
+    "playwright",
+    "pywebview",
+]
+all = [
+    "openai-whisper",
+    "google-cloud-speech",
+    "playwright",
+    "pywebview",
     "html2pic"
 ]
 

@@ -63,8 +63,19 @@ pycaps is currently in a very alpha stage and is not yet available on PyPI. You 
 1.  **Install FFmpeg**: Ensure you have completed the prerequisite step above.
 
 2.  **Install pycaps from GitHub:**
+
+    **Full installation (recommended):**
     ```bash
-    pip install git+https://github.com/francozanardi/pycaps.git
+    pip install "git+https://github.com/francozanardi/pycaps.git#egg=pycaps[all]"
+    ```
+
+    **Custom installation with specific features:**
+    ```bash
+    # Basic dependencies to work with default configuration (includes whisper and playwright)
+    pip install "git+https://github.com/francozanardi/pycaps.git#egg=pycaps[base]"
+
+    # Faster alternative, doesn't include subtitles editor, and renders without a browser (it uses google cloud speech to text and html2pic to render the subtitles)
+    pip install "git+https://github.com/francozanardi/pycaps.git#egg=pycaps[browser]"
     ```
 
 3.  **Install Browser Dependencies for Rendering (Optional):**
