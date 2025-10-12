@@ -1,5 +1,4 @@
 from pycaps.common import ElementState, Tag
-import webview
 import os
 from ..renderer_page import RendererPage
 from typing import Optional
@@ -29,6 +28,8 @@ class _Api:
 class CssSubtitlePreviewer:
 
     def run(self, custom_css: str, resources_dir: Optional[str] = None) -> None:
+        import webview
+
         if resources_dir and not os.path.exists(resources_dir):
             raise FileNotFoundError(f"Resources directory not found: {resources_dir}")
         if resources_dir and not os.path.isdir(resources_dir):

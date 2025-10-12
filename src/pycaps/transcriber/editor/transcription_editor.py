@@ -1,5 +1,4 @@
 from pycaps.common import Document
-import webview
 import os
 from typing import Optional
 
@@ -15,12 +14,16 @@ class _Api:
         return self._result_document
 
     def save(self, document_dict: dict):
+        import webview
+
         self._result_document = Document.from_dict(document_dict)
 
         if webview.active_window():
             webview.active_window().destroy()
 
     def cancel(self):
+        import webview
+        
         self._result_document = None
         if webview.active_window():
             webview.active_window().destroy()
@@ -28,6 +31,8 @@ class _Api:
 class TranscriptionEditor:
 
     def run(self, document: Document) -> Document:
+        import webview
+
         html_file_path = os.path.join(os.path.dirname(__file__), 'editor.html')
         html_content = open(html_file_path, 'r', encoding='utf-8').read()
 
