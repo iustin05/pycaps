@@ -24,8 +24,8 @@ jobs:
               libegl1-mesa \
               ttf-mscorefonts-installer
 
-      - name: Install package with fast extras
-        run: pip install -e .[fast]
+      - name: Install package without extras
+        run: pip install -e .
 
       - name: Run smoke test
         run: pycaps --help
