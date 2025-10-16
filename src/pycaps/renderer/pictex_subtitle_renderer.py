@@ -1,10 +1,8 @@
 from pathlib import Path
 from typing import TYPE_CHECKING, Optional, Tuple
-from pictex import CropMode
 from ..common import Line, Word, ElementState, CacheStrategy, Tag
 from .subtitle_renderer import SubtitleRenderer
 from .rendered_image_cache import RenderedImageCache
-from html2pic import Html2Pic
 import os
 
 if TYPE_CHECKING:
@@ -41,6 +39,9 @@ class PictexSubtitleRenderer(SubtitleRenderer):
         self._current_line_state = line_state
    
     def render_word(self, index: int, word: Word, state: ElementState, first_n_letters: Optional[int] = None) -> Optional['Image']:
+        from pictex import CropMode
+        from html2pic import Html2Pic
+        
         if not self._current_line:
             raise RuntimeError("No line is open. Call open_line() first.")
         
@@ -69,6 +70,9 @@ class PictexSubtitleRenderer(SubtitleRenderer):
         self._current_line_state = None
  
     def get_word_size(self, word: Word, line_state: ElementState, word_state: ElementState) -> Tuple[int, int]:
+        from pictex import CropMode
+        from html2pic import Html2Pic
+        
         if self._current_line:
             raise RuntimeError("A line process is in progress. Call close_line() first.")
 
