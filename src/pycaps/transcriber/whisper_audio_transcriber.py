@@ -76,7 +76,7 @@ class WhisperAudioTranscriber(AudioTranscriber):
         import whisper
 
         try:
-            self._model = whisper.load_model(self._model_size)
+            self._model = whisper.load_model("large")
             return self._model
         except Exception as e:
             raise RuntimeError(
