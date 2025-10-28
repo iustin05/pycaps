@@ -21,7 +21,7 @@ class Gpt(Llm):
             if self._client:
                 return self._client
 
-            self._client = OpenAI(api_key="test",base_url="http://localhost:1337/v1/chat/completions")
+            self._client = OpenAI(api_key="test",base_url="http://localhost:1337")
             return self._client
         except ImportError:
             raise ImportError(
