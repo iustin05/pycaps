@@ -14,7 +14,7 @@ class VideoConfig(BaseConfigModel):
 
 class WhisperConfig(BaseConfigModel):
     language: Optional[str] = None
-    model: Literal["tiny", "tiny.en", "base", "base.en", "small", "small.en", "medium", "medium.en", "large", "turbo"] = "base"
+    model: Literal["tiny", "tiny.en", "base", "base.en", "small", "small.en", "medium", "medium.en", "large", "turbo"] = "large"
 
 class LimitByWordsSplitterConfig(BaseConfigModel):
     type: Literal["limit_by_words"]
