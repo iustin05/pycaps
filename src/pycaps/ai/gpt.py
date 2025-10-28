@@ -9,7 +9,7 @@ class Gpt(Llm):
         self._client = None
 
     def send_message(self, prompt: str, model: str = "qwen3") -> str:
-        return self._get_client().responses.create(model="qwen3", input=prompt).output_text
+        return self._get_client().chat.completions.create(model="qwen3", messages=[{"role": "user", "content": prompt}]).choices[0].message.content
     
     def is_enabled(self) -> bool:
         return os.getenv(self.OPENAI_API_KEY_NAME) is None
