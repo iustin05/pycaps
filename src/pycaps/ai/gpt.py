@@ -12,7 +12,7 @@ class Gpt(Llm):
         return self._get_client().responses.create(model=model, input=prompt).output_text
     
     def is_enabled(self) -> bool:
-        return os.getenv(self.OPENAI_API_KEY_NAME) is not None
+        return os.getenv(self.OPENAI_API_KEY_NAME) is None
 
     def _get_client(self):
         try:
