@@ -8,7 +8,7 @@ class Gpt(Llm):
     def __init__(self):
         self._client = None
 
-    def send_message(self, prompt: str, model: str = "gpt-4.1-mini") -> str:
+    def send_message(self, prompt: str, model: str = "Jan-v1-4B-Q4_K_M") -> str:
         return self._get_client().responses.create(model=model, input=prompt).output_text
     
     def is_enabled(self) -> bool:
