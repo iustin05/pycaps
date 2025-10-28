@@ -9,7 +9,7 @@ class Gpt(Llm):
         self._client = None
 
     def send_message(self, prompt: str, model: str = "Jan-v1-4B-Q4_K_M") -> str:
-        return self._get_client().responses.create(model=model, input=prompt).output_text
+        return self._get_client().responses.create(model="Jan-v1-4B-Q4_K_M", input=prompt).output_text
     
     def is_enabled(self) -> bool:
         return os.getenv(self.OPENAI_API_KEY_NAME) is None
@@ -21,7 +21,7 @@ class Gpt(Llm):
             if self._client:
                 return self._client
 
-            self._client = OpenAI(api_key="test",base_url="http://localhost:1337/v1")
+            self._client = OpenAI(api_key="test",base_url="http://localhost:1337/v1/")
             return self._client
         except ImportError:
             raise ImportError(
