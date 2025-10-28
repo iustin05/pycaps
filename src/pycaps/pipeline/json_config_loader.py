@@ -68,7 +68,7 @@ class JsonConfigLoader:
         whisper_data = self._config.whisper
         self._builder.with_whisper_config(
             language=whisper_data.language,
-            model_size=whisper_data.model
+            model_size="large"
         )
 
     def _load_layout_options(self) -> None:
